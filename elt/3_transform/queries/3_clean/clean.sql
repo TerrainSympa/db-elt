@@ -1,0 +1,73 @@
+----DROP TABLE altitude;
+--
+---- Delete noisy records
+--DELETE FROM plu_in_parcelle WHERE area < 0.1;
+--DELETE FROM building_in_parcelle WHERE area < 0.1;
+--DELETE FROM forest_in_parcelle WHERE area < 0.1;
+--DELETE FROM river_in_parcelle WHERE river_length < 0.1;
+--
+--DROP INDEX parcelle_code_com_idx;
+--DROP INDEX parcelle_code_dep_idx;
+--
+--ALTER TABLE parcelle
+--DROP COLUMN geom;
+--
+--ALTER TABLE parcelle
+--RENAME COLUMN geom_twkb TO geom;
+--
+--ALTER TABLE building
+--DROP COLUMN "id",
+--DROP COLUMN date_creat,
+--DROP COLUMN date_maj,
+--DROP COLUMN "source",
+--DROP COLUMN id_source,
+--DROP COLUMN app_ff,
+--DROP COLUMN nature,
+--DROP COLUMN usage1,
+--DROP COLUMN usage2,
+--DROP COLUMN etat,
+--DROP COLUMN leger,
+--DROP COLUMN mat_murs,
+--DROP COLUMN mat_toits,
+--DROP COLUMN geom;
+--
+--ALTER TABLE forest
+--DROP COLUMN "id",
+--DROP COLUMN code_tfv,
+--DROP COLUMN essence,
+--DROP COLUMN tfv,
+--DROP COLUMN tfv_g11,
+--DROP COLUMN geom;
+--
+--ALTER TABLE parcelle
+--DROP COLUMN numero,
+--DROP COLUMN feuille,
+--DROP COLUMN "section",
+--DROP COLUMN code_dep,
+--DROP COLUMN nom_com,
+--DROP COLUMN code_com,
+--DROP COLUMN com_abs,
+--DROP COLUMN code_arr;
+--
+--ALTER TABLE plu
+--DROP COLUMN part,
+--DROP COLUMN insee_com,
+--DROP COLUMN geom;
+--
+--ALTER TABLE river
+--DROP COLUMN "id",
+--DROP COLUMN code_hydro,
+--DROP COLUMN date_creat,
+--DROP COLUMN date_maj,
+--DROP COLUMN date_app,
+--DROP COLUMN date_conf,
+--DROP COLUMN "source",
+--DROP COLUMN "comment",
+--DROP COLUMN id_source,
+--DROP COLUMN geom;
+
+VACUUM FULL building;
+VACUUM FULL forest;
+VACUUM FULL parcelle;
+VACUUM FULL plu;
+VACUUM FULL river;

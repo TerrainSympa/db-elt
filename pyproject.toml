@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "db-elt"
+version = "0.1.0"
+description = ""
+authors = ["antho <anthony.loup01@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.32.2"
+py7zr = "^0.21.0"
+progressbar = "^2.5"
+psycopg2 = "^2.9.9"
+bs4 = "^0.0.2"
+python-dotenv = "^1.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

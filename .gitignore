@@ -1,0 +1,12 @@
+.ipynb_checkpoints
+.idea
+data
+database
+venv
+.venv
+.env
+/README_private.md
+/elt/1_extract/deprecated/
+/elt/2_load/deprecated/
+/elt/3_transform/queries/scratches/
+/qgis/
